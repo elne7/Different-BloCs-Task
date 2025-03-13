@@ -1,4 +1,5 @@
 import 'package:different_blocs_task/bloc/counter/counter_bloc.dart';
+import 'package:different_blocs_task/bloc/my_theme.dart';
 import 'package:different_blocs_task/bloc/theme/theme_bloc.dart';
 import 'package:different_blocs_task/bloc/theme/theme_state.dart';
 import 'package:different_blocs_task/views/home_view.dart';
@@ -13,14 +14,14 @@ class MyApp extends StatelessWidget {
       create: (context) => CounterBloc(),
       child: BlocBuilder<ThemeBloc, ThemeState>(
         builder: (context, state) {
-          print(state);
           return MaterialApp(
             title: 'Flutter Demo',
             debugShowCheckedModeBanner: false,
             themeMode: (state is DarkTheme) ? ThemeMode.dark : ThemeMode.light,
             theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              colorScheme: MyTheme().light.colorScheme,
             ),
+            darkTheme: ThemeData(colorScheme: MyTheme().dark.colorScheme),
             home: const MyHomePage(title: 'Flutter Demo Home Page'),
           );
         },
