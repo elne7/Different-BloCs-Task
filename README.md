@@ -1,16 +1,14 @@
 # different_blocs_task
 
-A new Flutter project.
+A new Flutter project that demonstrates how to use different blocs in a single app.
 
-## Getting Started
+## **Features**
 
-This project is a starting point for a Flutter application.
+- Apply `CounterBloc` to manage the counter state.
+- Apply `ThemeBloc` to manage the app theme state.
+- Switch between light and dark themes using the `ThemeBloc`.
+- Increment and decrement the counter using the `CounterBloc`.
 
-A few resources to get you started if this is your first Flutter project:
+## **Dependances**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `flutter_bloc` for state management.
